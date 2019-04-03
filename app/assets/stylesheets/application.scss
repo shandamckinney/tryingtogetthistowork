@@ -1,0 +1,354 @@
+/*
+ *= require jquery.raty
+ */
+
+ @import 'bootstrap/glyphicons';
+
+body {
+  background-color: white;
+  height: 100%;
+}
+
+/* NAVBAR */
+.navbar-default {
+    background-color: #574B60;
+    border-color: #E7E7E7;
+}
+
+.navbar-default .navbar-brand {
+    color: #EAF0CE;
+    font-family: 'Poppins', sans-serif;
+}
+
+a.nav-item.nav-link.active {
+  color:#EAF0CE;
+}
+
+a.nav-item.nav-link {
+  color:#EAF0CE;
+}
+
+.navbar-toggler {
+  background-color: white;
+}
+
+.navbar-toggler-icon {
+  color: #EAF0CE;
+  margin-top: 10%;
+  margin-bottom: -15%;
+
+}
+.searchform {
+  margin-right: 4%;
+  margin-bottom: 1%;
+}
+a.navbar-brand {
+  font-size: 2.25em;
+}
+.nav-link {
+  font-size: 1.1em;
+}
+p.notice {
+  text-align: center;
+}
+/* HEADER */
+header.site-header{
+  background-color: black;
+}
+.upper-site-header {
+  background-color: black;
+}
+#headerbike {
+  height: 50%;
+  width: 50%;
+  padding-left: 30%;
+  margin-left: 10%;
+  margin-bottom: -3%;
+}
+#berlinheader {
+  font-size:3em;
+  padding-left: 41%;
+  color: #7c7c7c;
+}
+#stickynav {
+  background-color:black;
+  color: white;
+  margin-top: -2%;
+  margin-bottom: -2%;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li{
+  margin: auto;
+}
+
+a {
+  color: black;
+}
+
+.twitter {
+  display: flex;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+/* FRONT PAGE */
+#featuredtitle {
+  font-size: 4em;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 3%;
+}
+
+div.carousel-item {
+  padding-left: 11%;
+}
+.carousel-caption {
+  font-size: 3em;
+  color: white;
+  padding-top: 5%;
+  padding-right: 20%;
+}
+
+#mainpic {
+  margin-left: 22%;
+}
+
+#bikeneeds {
+  margin-left: 27%;
+  padding-bottom: 3%;
+}
+
+#currenttime{
+  margin-left: 33%;
+  font-size: 2em;
+}
+
+/* FOOTER */
+footer {
+  background-color: black;
+  color: white;
+  margin-top: 20%;
+
+}
+
+/*ABOUT PAGE */
+#aboutwelcome {
+  font-size: 3em;
+  text-align:center;
+  padding-bottom: 3%;
+
+}
+
+#storyquote {
+  text-align: center;
+}
+
+.container {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+/* CONTACT PAGE */
+#bluelinestory {
+  font-size: 16px;
+  font-family: Helvetica,Arial,sans-serif;
+}
+
+#contacttitle {
+  text-align: center;
+  font-size: 4em;
+  padding-top: 2%;
+}
+
+.form-group{
+  background-color: white;
+  display: inline;
+}
+
+#contactrow {
+  display: inline;
+  background-color: #574B60;
+}
+
+.contactcontainer {
+  width: auto;
+  height: 100%;
+  border: 5px;
+}
+.form-label{
+  background-color: white;
+}
+
+#tytemplate {
+  background-color: #7D8491;
+  margin: 5%;
+  text-align: center;
+}
+
+
+/* ORDERS */
+#orderstitle {
+  text-align: center;
+  font-size: 4em;
+}
+
+#orderoverallnum {
+  text-align: center;
+  font-size: 2.5em;
+}
+#smallerorderinfo {
+  text-align: center;
+}
+#smallerordernum {
+  font-size: 1em;
+
+}
+/* PRODUCTS */
+#producttitle {
+  font-size: 3em;
+  text-align: center;
+  letter-spacing: 2px;
+}
+#productdescription{
+  text-align: center;
+
+}
+#overview {
+  font-size: 2em;
+  font-weight: 300;
+}
+.container.show {
+  margin-top: -7%;
+  margin-left: 0;
+  margin-right: -5%;
+
+}
+
+#overview {
+  margin-top: 3%;
+}
+
+
+#newproducts {
+  margin-left: 41%;
+}
+
+form{
+  margin-top:0%;
+  text-align: center;
+  color: white;
+
+}
+label {
+  display:block;
+}
+input.form_label.btn-lg {
+  margin-bottom: 5%;
+}
+.form-control {
+  width: 20%;
+  color: black;
+  text-align: center;
+  margin-left: 40%;
+}
+.actions {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.averagerating{
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.newcomments {
+padding-top:5%;
+margin-left: 5%;
+}
+
+.oldcomments {
+padding-top: 10%;
+align-items: left;
+}
+
+
+
+form#new_comment.new_comment{
+  width: 50%;
+  height: auto;
+}
+button.stripe-button-el {
+  margin-top: 2%;
+  margin-left: -62%;
+}
+#timeandname {
+  padding-bottom: 5%;
+}
+
+.column {
+    float: left;
+
+}
+
+.left {
+  width: 50%;
+  padding-right: 5%;
+  padding-top: 2%;
+}
+
+.right {
+  width: 50%;
+  padding-left: 5%;
+  text-align: center;
+}
+
+em {
+  font-size: .25em;
+  margin-right: 10%;
+}
+
+#rating {
+  margin-right: 5%;
+}
+
+#commentbody {
+  margin-right: 5%;
+}
+
+.new_comment {
+  color: black;
+}
+
+div.rated {
+  margin-right: 5%;
+}
+
+.wholecomment {
+  padding-bottom: 5%;
+}
+
+
+/* Sign up and Sign in forms */
+input{
+  border-radius: 6px;
+}
+
+.form-group {
+  background-color: black;
+}
+
+#signup, #login, #forgotpassword, #changepassword {
+  text-align: center;
+  font-size: 3em;
+  padding-bottom: 5%;
+}

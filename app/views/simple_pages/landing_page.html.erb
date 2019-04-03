@@ -1,0 +1,33 @@
+<% cache do %>
+<div class="welcomecontainer">
+  <h1 id="bikeneeds"> All your bike needs in one place! </h1>
+
+<!-- <h2 id="featuredtitle">Featured Product</h2>
+<%= @featured_product.name %> -->
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="padding-left: 17%">
+  <ol class="carousel-indicators">
+    <% @products.each_with_index do |product, index| %>
+    <li data-target="#carouselExampleControls" data-slide-to="<%= index %>" class="<%= "active" if product == @products.first %>"></li>
+    <% end %>
+  </ol>
+<div class="carousel-inner">
+  <% @products.each do |product| %>
+  <div class="carousel-item<%= " active" if product == @products.first %>">
+    <%= image_tag(product.image_url, class: "img-responsive") %>
+    <div class="carousel-caption">
+      <h2><%= product.name %></h2>
+    </div>
+  </div>
+  <% end %>
+</div>
+<a id="carouselarrowleft" class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a id="carouselarrowright" class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a>
+</div>
+<% end %>

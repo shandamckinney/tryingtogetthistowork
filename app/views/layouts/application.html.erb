@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Firstproject</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Raleway" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  </head>
+
+  <body>
+    <header class="site-header" role="banner" data-section-id="header" data-section-type="header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="https://png.pngtree.com/thumb_back/fw800/back_pic/00/09/89/3856308ce4a878a.jpg" width="50" height="50" class="d-inline-block align-top" alt="White outline of a bike">
+    Berlin Bikes
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <%= link_to "Products", products_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+       <%= link_to "About", simple_pages_about_path, class: "nav-link" %>
+      </li>
+<li class="nav-item">
+        <%= link_to "Contact", simple_pages_contact_path, class: "nav-link" %>
+      </li>
+    </ul>
+    <div class="searchform">
+    <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+              <%= form.label :q, 'Search for:' %>
+              <%= form.text_field :q, id: 'q', value: params[:q] %>
+              <%= form.submit 'Search', class: 'btn-xs' %>
+              <% end %>
+    </div>
+  </div>
+        <ul class="navbar-nav ml-auto">
+          <% if user_signed_in? %>
+          <li class="nav-item loginbtn">
+            <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "nav-link")%>
+          </li>
+          <% else %>
+          <li class="nav-item loginbtn">
+            <%= link_to('Login', new_user_session_path, class: "nav-link") %>
+          </li>
+          <% end %>
+        </ul>
+      </nav>
+    </header>
+
+    <% if alert %>
+    <p id="alert" class="alert alert-dark"><%= alert %></p>
+    <% end %>
+
+    <% if notice %>
+    <p id="notice" class="alert alert-dark"><%= notice %></p>
+    <% end %>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><% alert %></p>
+
+    <%= yield %>
+
+    <footer class="page-footer font-small blue">
+      <div class="footer-copyright text-center py-3">© 2018 Copyright: Shanda McKinney
+        <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+      </div>
+    </footer>
+  </body>
+</html>

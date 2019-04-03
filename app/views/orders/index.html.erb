@@ -1,0 +1,20 @@
+<h1 id="orderstitle"> New Orders to be Filled </h1>
+<div class="row">
+  <% @orders.each do |order| %>
+    <div class="col-sm">
+      <h1 id="orderoverallnum">Order # <%= order.id %> :</h1>
+    </div> <!-- /col -->
+  <% end %>
+</div>
+<div class="row">
+  <% @orders.each do |order| %>
+    <div class="col-sm" id=smallerorderinfo>
+      <h1 id="smallerordernum">
+        Order # <%= order.id %>:
+        <%= link_to order.product.name, order %>
+      </h1>
+      <p><%= order.product.description %></p>
+      <strong>$ <%= order.product.price %></strong>
+    </div><!-- /col -->
+  <% end %>
+</div>

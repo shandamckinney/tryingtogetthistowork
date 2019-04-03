@@ -1,0 +1,3 @@
+Product.create(name: "Cool Bike", description: "Cook bike with cool pedals", image_url:"https://cdn.road.cc/sites/default/files/styles/main_width/public/google-bike-source-republic-bikes.png?itok=Ul47AUtG")
+Product.create(name: "Cool Bike", description: "Cook bike with cool pedals", image_url:"https://cdn.road.cc/sites/default/files/styles/main_width/public/google-bike-source-republic-bikes.png?itok=Ul47AUtG")
+Product.create(name: "Cool Bike", description: "Cook bike with cool pedals", image_url:"https://cdn.road.cc/sites/default/files/styles/main_width/public/google-bike-source-republic-bikes.png?itok=Ul47AUtG")

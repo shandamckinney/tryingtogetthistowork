@@ -1,0 +1,57 @@
+body {
+  background-color: #70ABAF;
+}
+
+h1 {
+  font-size: 5em;
+  font-family: sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 5em;
+  font-family: sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 2em;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+footer {
+  text-align: left;
+}
+
+.main-pic {
+  padding-left: 10%;
+}
+
+.second-pic {
+  padding-left: 10%;
+}
+
+div.col-sm {
+  border-style: solid;
+  padding: 3%;
+  margin: 1%;
+}
+.pdttitle {
+  font-size: 3em;
+}
+
+.pdtdescribe {
+  font-size: 1.5em;
+}
+
+.pdtcolor {
+  font-size: 1em;
+}
+
+.pdtprice {
+  font-size: 1em;
+  font-weight: 600;
+}

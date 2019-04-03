@@ -1,0 +1,10 @@
+development:
+  adapter: async
+
+test:
+  adapter: async
+
+production:
+  adapter: postgresql
+  url: postgres://srdmyoavbrxivy:5e0c3462a4a41b4aa18968b79f6fc9c037098734ba056b75b5fcc0027d8df823@ec2-54-225-241-25.compute-1.amazonaws.com:5432/d117uoe7rsib3c
+  channel_prefix: firstproject_production

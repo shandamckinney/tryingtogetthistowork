@@ -1,0 +1,54 @@
+
+<div class="container show">
+
+  <div class="row" data-product-id="<%= @product.id %>">
+    <div class="col-sm-12 col-lg-8 productinfoleft img-fluid">
+        <%= image_tag(@product.image_url,  class: "img-fluid img-zoom",  data_zoom_image: "@product.product_image.url")  %>
+    </div>
+    <div class="col-sm-12 col-lg-4 productinforight">
+      <% cache @product do %>
+        <p id="producttitle">
+          <strong><%= @product.name %></strong>
+        </p>
+        <p id="productdescription">
+          <%= @product.description %>
+        </p>
+        <p id="overview">
+          <strong>Overview:</strong>
+        </p>
+        <p>
+          <%= @product.colour %>
+        </p>
+        <p>
+          <%= @product.price %>
+        </p>
+        <% end %>
+        <p> Average Rating: <div class="rated" id="average_rating" data-score="<%= @product.average_rating %>"></p>
+        </div>
+
+        <% if user_signed_in? %>
+        <%= form_with(url: '/payments/create') do |form| %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+      <%= hidden_field_tag(:product_id, @product.id) %>
+      <% end %>
+    <% end %>
+
+      </div>
+    </div>
+  </div>
+
+ <div class="row">
+   <div class="col-lg-4">
+     <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+        <%= render 'comments' %>
+        </div>
+        <div class="col-lg-8">
+
+        <%= render 'new_comment' %>
+    </div>
+</div>
+      </div>
+    </div
+  </div>
+
+  <%= will_paginate @comments %>
